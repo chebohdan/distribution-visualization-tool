@@ -19,10 +19,6 @@ export const DataVisualizer = <T extends Record<string, any>>({
   distributionBy,
   filterBy,
 }: DataVisualizerProps<T>) => {
-  {
-    console.count();
-  }
-
   // -------------------------------
   // Hooks
   // -------------------------------
