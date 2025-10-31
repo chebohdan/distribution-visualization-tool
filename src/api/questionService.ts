@@ -14,8 +14,6 @@ async function getQuestions(count: number): Promise<Question[]> {
     incorrectAnswers: q.incorrectAnswers.map((item) => decodeHtml(item)),
   }));
 
-  console.log(decodedResults);
-
   return decodedResults;
 }
 

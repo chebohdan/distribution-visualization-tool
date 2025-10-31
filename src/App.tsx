@@ -31,9 +31,6 @@ function App() {
       .then((data: Question[]) => {
         setQuestions(data);
       })
-      .catch((error) => {
-        console.log(error);
-      })
       .finally(() => {
         setLoading(false);
       });
