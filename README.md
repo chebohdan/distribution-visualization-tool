@@ -17,7 +17,7 @@ A simple React + TypeScript component for showing data with charts, filters, and
 </ul>
 
 
-<h2> Usagex Example </h2>
+<h2> Usage Example </h2>
 
 ```
 import { DataVisualizer } from "./components/DataVisualizer";
