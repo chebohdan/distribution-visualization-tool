@@ -1,77 +1,39 @@
-<<<<<<< HEAD
-# React + TypeScript + Vite
+<h1>Data Visualizer</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React + TypeScript component for showing data with charts, filters, and tables.
 
-Currently, two official plugins are available:
+<h2> Features </h2>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<ul>
+  
+  <li> Bar chart visualizations </li>
+  
+  <li> Filter panel for easy data selection </li>
+  
+  <li> Table view of filtered data </li>
+  
+  <li> Built with Tailwind CSS </li>
 
-## React Compiler
+</ul>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+<h2> Usagex Example </h2>
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+import { DataVisualizer } from "./components/DataVisualizer";
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+const data = [
+  { id: 1, category: "Electronics", product: "Laptop", region: "North", year: 2023, sales: 1200, units: 45 },
+  { id: 2, category: "Clothing", product: "Jacket", region: "South", year: 2023, sales: 850, units: 65 },
+  { id: 3, category: "Home Goods", product: "Lamp", region: "East", year: 2023, sales: 420, units: 38 },
+  { id: 4, category: "Sports", product: "Bicycle", region: "West", year: 2023, sales: 1600, units: 22 },
+  { id: 5, category: "Electronics", product: "Smartphone", region: "North", year: 2024, sales: 2400, units: 80 }
+];
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+<DataVisualizer
+  data={data}
+  distributionBy={["category", "region"]}
+  filterBy="region"
+/>;
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
-=======
-# distribution-visualization-tool
->>>>>>> ee6b8eebbe7fdbe80473d975de702e3cde230bd8
