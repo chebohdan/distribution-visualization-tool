@@ -29,3 +29,7 @@ export interface FilterOption {
 export interface FrequencyData {
   [key: string]: number;
 }
+
+export interface FlatRecord {
+  [key: string]: string | number | boolean | null | undefined;
+}
