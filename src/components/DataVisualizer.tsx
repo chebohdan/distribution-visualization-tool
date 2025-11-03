@@ -8,13 +8,17 @@ import useDataKeys from "../hooks/useDataKeys";
 import useFilter from "../hooks/useFilter";
 import PropertyVisualizer from "./PropertyVisualizer/PropertyVisualizer";
 
-interface DataVisualizerProps<T extends Record<string, any>> {
+interface DataVisualizerProps<T extends FlatRecord> {
   data: T[];
   distributionBy: (keyof T)[];
   filterBy: keyof T;
 }
 
-export const DataVisualizer = <T extends Record<string, any>>({
+type FlatRecord = {
+  [key: string]: string | number | boolean | null | undefined;
+};
+
+export const DataVisualizer = <T extends FlatRecord>({
   data,
   distributionBy,
   filterBy,

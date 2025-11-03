@@ -13,6 +13,7 @@ import type { Question } from "./types";
 // Api
 import { getQuestions } from "./api/questionService";
 import Loading from "./components/Loading/Loading";
+import { getFlatRecords } from "./helpers/objectUtils";
 
 function App() {
   // -------------------------------
@@ -38,12 +39,14 @@ function App() {
 
   if (loading) return <Loading />;
 
+  const flatQuestion = getFlatRecords(questions);
+
   return (
     <div className="bg-gray-950">
       <DataVisualizer
-        data={questions}
-        distributionBy={["category", "difficulty"]}
-        filterBy={"category"}
+        data={flatQuestion}
+        distributionBy={["category", "region", "year"]}
+        filterBy="region"
       />
     </div>
   );
