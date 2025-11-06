@@ -45,8 +45,8 @@ function App() {
     <div className="bg-gray-950">
       <DataVisualizer
         data={flatQuestion}
-        distributionBy={["category", "region", "year"]}
-        filterBy="region"
+        distributionBy={["category", "difficulty"]}
+        filterBy="category"
       />
     </div>
   );
