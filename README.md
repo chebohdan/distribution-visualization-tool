@@ -1,25 +1,31 @@
-<h1>Data Visualizer</h1>
+# Distribution Visualizer Tool
 
-A simple React + TypeScript component for showing data with charts, filters, and tables.
+A simple React + TypeScript component for visualizing and filtering specific fields of input data using charts and tables.
 
-<h2> Features </h2>
+## Table of Contents
+1. [Overview](#overview)  
+2. [Features](#features)  
+3. [Technology](#technology)  
+4. [Usage](#usage)
 
-<ul>
-  
-  <li> Bar chart visualizations </li>
-  
-  <li> Filter panel for easy data selection </li>
-  
-  <li> Table view of filtered data </li>
-  
-  <li> Built with Tailwind CSS </li>
+## Overview
+System Metrics Exporter programmatically creates Grafana dashboards and uploads them on application start. It displays system metrics such as CPU and integrates with Prometheus for metric collection.
 
-</ul>
+## Features
+- Bar chart visualizations  
+- Filter panel for easy data selectio  
+- Table view of filtered data
+- Built with Tailwind CSS
 
+## Technology
+- React
+- Typescript
+- Tailwind CSS
+- Axios
 
-<h2> Usage Example </h2>
+## Usage
 
-```
+``` ts
 import { DataVisualizer } from "./components/DataVisualizer";
 
 const data = [
@@ -35,5 +41,5 @@ const data = [
   distributionBy={["category", "region"]}
   filterBy="region"
 />;
-
 ```
+You can access static page on https://chebohdan.github.io/distribution-visualization-tool/
