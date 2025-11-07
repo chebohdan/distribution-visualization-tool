@@ -3,13 +3,9 @@
 A simple React + TypeScript component for visualizing and filtering specific fields of input data using charts and tables.
 
 ## Table of Contents
-1. [Overview](#overview)  
-2. [Features](#features)  
-3. [Technology](#technology)  
-4. [Usage](#usage)
-
-## Overview
-System Metrics Exporter programmatically creates Grafana dashboards and uploads them on application start. It displays system metrics such as CPU and integrates with Prometheus for metric collection.
+1. [Features](#features)  
+2. [Technology](#technology)  
+3. [Usage](#usage)
 
 ## Features
 - Bar chart visualizations  
